@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -nFNm
+ls -anFNm
