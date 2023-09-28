@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo hown -R vincent:staff .
+sudo own -R vincent:staff .
