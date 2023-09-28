@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo chmod --from=guillaume betty hello
