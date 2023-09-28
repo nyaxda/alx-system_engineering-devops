@@ -1,2 +1,2 @@
 #!/bin/bash
-mpv "path/to/the/starwarsmovie.mp4"
+telnet towel.blinkenlights.nl
