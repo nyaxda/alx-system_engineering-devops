@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-count = 10
+count=10
 
 for item in count
 do
