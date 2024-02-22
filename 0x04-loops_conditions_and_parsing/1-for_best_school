@@ -2,7 +2,7 @@
 
 count=10
 
-for item in count
+for ((item=1; item<=count; item++))
 do
     echo "Best School"
     ((count--))
