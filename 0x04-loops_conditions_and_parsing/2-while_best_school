@@ -1,19 +1,9 @@
 #!/usr/bin/env bash
-# Bash script that displays the time for 12 hours and 59 minutes:
-#display hours from 0 to 12
-#display minutes from 1 to 59
+# Script that displays Best School 10 times.
+count=0
 
-minutes = 0
-hours = 0
-while [ $minutes -le 60 ]
+while [ $count -lt 10 ]
 do
-    if [$minutes -eq 60]
-    then
-        minutes = 0
-        ((hours++))
-        echo "Hour: $hours"
-    else
-        echo "$minutes"
-    fi
-    ((minutes++))
+    echo "Best School"
+    ((count++))
 done
