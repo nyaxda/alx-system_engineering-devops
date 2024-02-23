@@ -6,3 +6,4 @@ while [ $count -lt 10 ]
 do
     echo "Best School"
     ((count++))
+done
