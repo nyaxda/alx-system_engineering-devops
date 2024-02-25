@@ -5,4 +5,4 @@
 # Show process hierarchy
 # displays lines containing the bash word
 
-ps auxf -C bash
+ps aux | grep bash
