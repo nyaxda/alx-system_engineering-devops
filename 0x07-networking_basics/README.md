@@ -40,7 +40,7 @@ All my regex were built for the Oniguruma library
 
 ## Tasks
 
-[**0. OSI model**](https://github.com/nyaxda/alx-system_engineering-devops/blob/main/0x06-regular_expressions/0-simply_match_school.rb)
+### [**0. OSI model**](https://github.com/nyaxda/alx-system_engineering-devops/blob/main/0x06-regular_expressions/0-simply_match_school.rb)
 Answer to questions:
 
 What is the OSI model?
