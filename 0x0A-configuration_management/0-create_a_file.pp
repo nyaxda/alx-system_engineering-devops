@@ -1,5 +1,6 @@
-file { '/tmp/school':
-    ensure  => file,
+#c creates a file in /tmp
+
+ile { '/tmp/school':
     mode    => '0744',
     owner   => 'www-data',
     group   => 'www-data',
