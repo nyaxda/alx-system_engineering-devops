@@ -1,6 +1,6 @@
-#c creates a file in /tmp
+#creates a file in /tmp
 
-ile { '/tmp/school':
+file { '/tmp/school':
     mode    => '0744',
     owner   => 'www-data',
     group   => 'www-data',
