@@ -1,2 +1,2 @@
 #!/usr/bin/env basscript that uses ssh to connect to your server using the private key
-ssh -i ~/.ssh/school ubuntu@100.25.170.102
+ssh -i ~/.ssh/school ubuntu@531456-web-01
