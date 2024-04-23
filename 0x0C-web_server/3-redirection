@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Installs nginx server
+apt-get update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo "Hello World!" > /var/www/html/index.html
+string_for_replacement="location \/ {\n\t\ttry_files \$uri \$uri\/ =404;\n\t\trewrite ^\/redirect_me https:\/\/holbnyakundi.tech permanent;\n\t}"
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+service nginx restart
