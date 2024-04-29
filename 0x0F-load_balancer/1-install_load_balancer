@@ -6,7 +6,8 @@ sudo apt-get install --no-install-recommends software-properties-common -y
 sudo add-apt-repository ppa:vbernat/haproxy-2.9 -y
 sudo apt-get install haproxy=2.9.\* -y
 load_balancer_config_file="/etc/haproxy/haproxy.cfg"
-printf "
+configuration=\
+"
 backend web-backend
     mode http
     balance roundrobin
@@ -17,6 +18,8 @@ frontend web-frontend
     mode http
     bind *:80
     default_backend web-backend
-" | sudo tee $load_balancer_config_file
-sudo systemctl enable haproxy
-sudo systemctl restart haproxy
+"
+echo "$configuration" | sudo tee -a $load_balancer_config_file
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+
+sudo service haproxy restart
