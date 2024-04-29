@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script is used to build the project and run the tests
+header="X-Served-By"
+value=$(hostname)
+nginx_path="/etc/nginx/sites-available/default"
+sudo sed -i "/server {/a\ \ \ \ add_header $header $value;}" $nginx_path
+sudo systemctl reload nginx
