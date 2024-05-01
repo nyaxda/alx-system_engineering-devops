@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Opens port 80
 
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-sudo service nginx start
-sudo apt-get -y install net-tools
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
