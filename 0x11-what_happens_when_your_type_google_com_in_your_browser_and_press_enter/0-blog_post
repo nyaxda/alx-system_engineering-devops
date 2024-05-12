@@ -1,0 +1,45 @@
+# What Happens When you Type google.com in your Browser and press Enter
+
+
+Have you ever wondered what happens in between you typing google.com and pressing Enter, and the webpage showing up in your website? Here is a breakdown of what happens:
+
+## 1. DNS Lookup
+DNS, or Domain Name System, is the internet’s phonebook. The browser seeks to translate human friendly domain name to an IP address. In this case, it translates domain name “google.com” into the assigned IP address, “172.217.6.14”. So the computer sends a query to a DNS server that fetches the corresponding IP address of the Google’s server.
+
+## 2. TCP/IP Protocol
+
+This is the next step after a successful DNS lookup. TCP (Transmission Control Protocol) is a set of rules that govern how data is transmitted and received between devices on a network. TCP ensures communication by establishing a reliable connection between the client’s computer and Google’s server via the IP (Internet Protocol) address. The process is also known as a handshake. TCP ensures that data packets are delivered in the correct order and retransmits lost packets to guarantee integrity of the communication.
+
+IP (Internet Protocol) handles the routing of the data packets to the correct destination. Each data packet is tagged with source and destination IP addresses. The routers, in turn, forward those packets along the most efficient paths to their intended destination.
+
+## 3. Firewall
+
+As the request to access “google.com” is propagated through the internet, it encounters security measures to ensure protection against unauthorized access and potential threats. These checkpoints such as firewalls are put in place to enforce that.
+
+A firewall safeguards the client and the servers alike. The firewall is a security system that ensures only authorized traffic is allowed based on predefined rules. So the firewall simply analyzes the request to ensure it aligns with the established rules and criteria. If the request meets the criteria, the firewall allows it to proceed to the server for further processing.
+
+## 4. HTTPS/SSL
+
+Google servers are configures to use HTTPS, which stands for Hypertext Transfer Protocol Secure. It is an extension of HTTP with an added layer of security provided by SSL/TLS encryption.
+
+As the request reaches Google’s servers, it undergoes encryption and authentication through SSL/TLS protocols. SSL (Secure Socket Layer or Transport Layer Security) ensures a secure connection by encrypting data transferred between the browser and Google’s server to safeguard against eavesdropping.
+
+In addition to encryption, mechanisms for server authentication is also provided. After the connection has been established, the server presents a digital certificate containing its public key. The browser verifies the certificate against a list of trusted certificate authorities to ensure authenticity of the server.
+
+## 5. Load Balancer
+
+The request encounters a load balancer in the Google’s web infrastructure as it continues its journey. A load balancer distributes oncoming traffic across several backend servers to improve application performance by increasing response time and reducing network latency.
+
+## 6. Web Server
+
+At this point, the request has reached the web server that hosts the website’s content. It is the hub for gathering and delivering necessary files and media required to construct the google.com website’s content. The web server gathers necessary files and media for google.com homepage. They include HTML, CSS, JavaScript, images, files, fonts and media. It then assembles everything and generates a HTTPS response containing the webpage, which is now sent back to the browser for display.
+
+## 7. Application Server
+
+The web server then sends this request to the application server, which is responsible for handling dynamic content generation and user-specific interactions. It is part of the Google’s web infrastructure. It serves dynamic content personalized to each user. It executes the necessary business logic, interacting with the database, and preparing the HTTP response accordingly. The dynamic content may include personalized search results, recommendations, customized features tailored to the client to enhance the user experience.
+
+## 8. Database
+
+Upon the application server receives a request, it queries one or more databases to access user-specific information like settings, search history and real time usage statistics. The application server queries these databases to retrieve relevant data needed to tailor the content specific for each user.
+
+Once the application server gathers the necessary information from the databases, it incorporates it into dynamic content before sending it back to the web server before it finally prepares and sends an HTTP response, which is encrypted via HTTPS, back to the user’s browser for display on the “google.com” homepage.
