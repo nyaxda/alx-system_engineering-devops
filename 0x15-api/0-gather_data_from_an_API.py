@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Returns to-do list information for a given employee ID."""
-import json
-import sys
 import requests
+import sys
 
 
 if __name__ == "__main__":
@@ -27,7 +26,7 @@ if __name__ == "__main__":
 
     print(
         "Employee {} is done with tasks({}/{}):".format(employee_name,
-                                                         done_tasks,
-                                                         total_tasks))
+                                                        done_tasks,
+                                                        total_tasks))
     for i in range(done_tasks):
         print("\t {}".format(completed_tasks[i]['title']))
