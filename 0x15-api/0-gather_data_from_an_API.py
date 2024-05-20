@@ -5,7 +5,6 @@ import sys
 import urllib.request
 
 
-
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         exit(1)
@@ -31,4 +30,4 @@ if __name__ == "__main__":
                                                          done_tasks,
                                                          total_tasks))
     for i in range(done_tasks):
-        print("     {}".format(completed_tasks[i]['title']))
+        print("\t {}".format(completed_tasks[i]['title']))
