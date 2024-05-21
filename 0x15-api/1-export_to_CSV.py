@@ -30,13 +30,6 @@ if __name__ == "__main__":
     completed_tasks = [todo.get("title") for todo in todos if todo.get(
         "completed")]
 
-    print(
-        "Employee {} is done with tasks({}/{}):".format(employee_name,
-                                                        len(completed_tasks),
-                                                        total_tasks))
-    for task in completed_tasks:
-        print("\t {}".format(task))
-
     username = employee.get('username')
     data = []
     for todo in todos:
