@@ -15,12 +15,11 @@ if __name__ == "__main__":
     employee = response.json()
     employee_name = employee.get('name')
 
-    response2 = requests.get("{}/todos".format(url))
+    response2 = requests.get("{}/todos".format(
+        url), params={"userId": sys.argv[1]})
     todos = response2.json()
-    filtered_todos = [todo for todo in todos if todo.get(
-        "userId") == employee_id]
-    total_tasks = len(filtered_todos)
-    completed_tasks = [todo for todo in filtered_todos if todo.get(
+    total_tasks = len(todos)
+    completed_tasks = [todo.get("title") for todo in todos if todo.get(
         "completed")]
     done_tasks = len(completed_tasks)
 
@@ -29,4 +28,4 @@ if __name__ == "__main__":
                                                         done_tasks,
                                                         total_tasks))
     for i in range(done_tasks):
-        print("\t {}".format(completed_tasks[i]['title']))
+        print("\t {}".format(completed_tasks[i]))
