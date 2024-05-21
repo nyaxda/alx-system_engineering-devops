@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Exports to-do list information for a given employee ID to CSV format."""
+"""
+This module exports to-do list information for a given employee ID to CSV format.
+"""
 
 import requests
 import pandas
@@ -7,7 +9,6 @@ import sys
 
 
 if __name__ == "__main__":
-    """Exports to-do list information for a given employee ID to CSV format."""
     if len(sys.argv) != 2:
         sys.exit(1)
     try:
