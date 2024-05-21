@@ -2,7 +2,7 @@
 """Exports to-do list information for a given employee ID to CSV format."""
 
 import requests
-import pandas as pd
+import pandas
 import sys
 
 
@@ -42,7 +42,7 @@ if __name__ == "__main__":
         data.append([employee_id, username, todo.get(
             "completed"), todo.get("title")])
 
-    df = pd.DataFrame(data,
+    df = pandas.DataFrame(data,
                       columns=["USER_ID", "USERNAME",
                                "TASK_COMPLETED_STATUS",
                                "TASK_TITLE"])
