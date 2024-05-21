@@ -12,7 +12,7 @@ if __name__ == "__main__":
     except ValueError:
         print("Not Found")
         sys.exit(1)
-    
+
     url = 'https://jsonplaceholder.typicode.com'
 
     response = requests.get("{}/users/{}".format(url, employee_id))
