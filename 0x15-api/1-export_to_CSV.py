@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Returns to-do list information for a given employee ID."""
+"""
+Returns to-do list information for a given employee ID.
+and exports it as csv
+"""
 import requests
 import pandas as pd
 import sys
