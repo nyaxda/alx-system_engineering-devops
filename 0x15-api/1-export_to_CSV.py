@@ -1,13 +1,8 @@
 #!/usr/bin/python3
-"""
-This module exports to-do list information for a given employee ID.
+"""This module exports to-do list information for a given employee ID."""
 
-It fetches the employee and their tasks from a given URL and
-exports the data in CSV format.
-"""
-
+import csv
 import requests
-import pandas
 import sys
 
 
@@ -38,10 +33,7 @@ if __name__ == "__main__":
     for todo in todos:
         data.append([employee_id, username, todo.get(
             "completed"), todo.get("title")])
-
-    df = pandas.DataFrame(data, columns=["USER_ID", "USERNAME",
-                                         "TASK_COMPLETED_STATUS",
-                                         "TASK_TITLE"])
-    df.to_csv('{}.csv'.format(employee_id),
-              index=False, header=False,
-              quotechar='"', quoting=1)
+    filename = '{}.csv'.format(employee_id)
+    with open(filename, 'w') as f:
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
+        writer.writerows(data)
