@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-This module exports to-do list information for a given
-employee ID to CSV format.
+This module exports to-do list information for a given employee ID.
+
+It fetches the employee and their tasks from a given URL and
+exports the data in CSV format.
 """
 # Using what you did in the task #0,
 # extend your Python script to export data in the  format.
