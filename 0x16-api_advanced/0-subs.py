@@ -6,7 +6,11 @@ subscribers for a given subreddit
 import requests
 
 def number_of_subscribers(subreddit):
-    if subreddit is None or type(subreddit) is not str:
+    """
+    Query the Reddit API and return the number of
+    subscribers for a given subreddit
+    """
+    if subreddit is None:
         return 0
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {
