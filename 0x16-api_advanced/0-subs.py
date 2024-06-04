@@ -10,8 +10,6 @@ def number_of_subscribers(subreddit):
     Query the Reddit API and return the number of
     subscribers for a given subreddit
     """
-    if subreddit is None or not isinstance(subreddit, str):
-        return 0
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {'User-Agent': 'MyApp/1.0'}
     response = requests.get(url, headers=headers, allow_redirects=False)
