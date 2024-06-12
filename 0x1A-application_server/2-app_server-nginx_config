@@ -1,0 +1,13 @@
+server {
+        # Listen on port 80.
+        listen 80;
+
+        # Use server IP as domain name
+        server_name 100.25.170.102;
+        
+        # Serve /airbnb-onepage/ route on AirBnB_clone_v2
+        location /airbnb-onepage/ {
+                include proxy_params;
+                proxy_pass http://localhost:5000;
+        }
+}
