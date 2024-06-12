@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 # Gracefully reloads Gunicorn.
 
-pgrep gunicorn | xargs kill -HUP
+# Get the PID of the oldest (master) Gunicorn process
+PID=$(pgrep -o gunicorn)
+
+# Reload Gunicorn gracefully
+kill -HUP "$PID"
